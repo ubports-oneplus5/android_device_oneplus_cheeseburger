@@ -185,3 +185,6 @@ sys.usb.rmnet.func.name=gsi
 
 # Wi-Fi
 wifi.interface=wlan0
+
+
+ril.num_slots=2
