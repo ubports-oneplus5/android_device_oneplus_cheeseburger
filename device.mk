@@ -349,6 +349,9 @@ PRODUCT_COPY_FILES += \
      libaudioflingerglue \
      libdroidmedia \
      libminisf
+# for off charging mode
+PRODUCT_PACKAGES += \
+    charger_res_images
      
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ubuntu/70-cheeseburger.rules:system/halium/lib/udev/rules.d/70-android.rules \
