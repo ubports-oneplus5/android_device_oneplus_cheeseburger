@@ -1098,3 +1098,16 @@ service time_daemon /system/bin/time_daemon
     class main
     user root
     group root
+    
+service minimedia /system/bin/minimediaservice
+    class main
+    user media
+    group audio camera
+    ioprio rt 4
+#   hack to make recorded video playback work
+    setenv LD_PRELOAD /system/lib/libOmxVdec.so
+    
+service miniafservice /system/bin/miniafservice
+    class core
+    user root
+    group audio
