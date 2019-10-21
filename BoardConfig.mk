@@ -269,5 +269,11 @@ WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/wlan.ko"
 WIFI_DRIVER_MODULE_NAME := "wlan"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
+#allow arm64 libhybris
+HYBRIS_MEDIA_32_BIT_ONLY := false
+
+#droidmedia
+MINIMEDIA_SENSORSERVER_DISABLE := 1
+
 # inherit from the proprietary version
 -include vendor/oneplus/cheeseburger/BoardConfigVendor.mk
