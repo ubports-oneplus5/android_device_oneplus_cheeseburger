@@ -336,10 +336,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini
-    
-    
+
 # UBPorts
- PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     libubuntu_application_api \
     direct_ubuntu_application_sensors_c_api_for_hybris_test \
     direct_ubuntu_application_sensors_for_hybris_test \
@@ -355,11 +354,7 @@ PRODUCT_COPY_FILES += \
     libui_compat_layer \
     libsf_compat_layer \
     libaudioflingerglue
-     
-# for off charging mode
-PRODUCT_PACKAGES += \
-    charger_res_images
-     
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ubuntu/70-cheeseburger.rules:system/halium/lib/udev/rules.d/70-android.rules \
     $(LOCAL_PATH)/ubuntu/70-cheeseburger.rules:system/halium/usr/lib/lxc-android-config/70-android.rules \
@@ -373,4 +368,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ubuntu/bluetooth-touch-cheeseburger.conf:system/halium/etc/init/bluetooth-touch-android.conf \
     $(LOCAL_PATH)/ubuntu/touch.pa:system/halium/etc/pulse/touch.pa \
     $(LOCAL_PATH)/ubuntu/anbox-tool:system/halium/usr/bin/anbox-tool \
+    $(LOCAL_PATH)/ubuntu/usr.bin.media-hub-server:system/halium/etc/apparmor.d/local/usr.bin.media-hub-server \
+    $(LOCAL_PATH)/ubuntu/base:system/halium/etc/apparmor.d/abstractions/base \
     $(LOCAL_PATH)/ubuntu/environment:system/halium/etc/environment
+
+# for off charging mode
+PRODUCT_PACKAGES += \
+    charger_res_images
