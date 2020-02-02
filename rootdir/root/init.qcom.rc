@@ -1074,6 +1074,13 @@ service seemp_healthd /system/vendor/bin/seemp_healthd
 
 on charger
     setprop persist.sys.usb.config charging
+    start charger_healthd
+
+service charger_healthd /sbin/healthd -c
+    class core
+    critical
+    group root system wakelock
+    disabled
 
 #add poweroffhandler
 service poweroffhandler /system/bin/poweroffhandler
