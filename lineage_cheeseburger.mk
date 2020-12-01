@@ -16,19 +16,18 @@
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from cheeseburger device
 $(call inherit-product, device/oneplus/cheeseburger/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Halium stuff.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/halium.mk)
 
 PRODUCT_NAME := lineage_cheeseburger
 PRODUCT_DEVICE := cheeseburger
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
-PRODUCT_MODEL := ONEPLUS A5000
+PRODUCT_MODEL := 5 (A5000)
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
